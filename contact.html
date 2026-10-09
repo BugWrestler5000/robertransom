@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>Contact — Robert Ransom</title>
+  <meta name="description" content="Contact Robert Ransom, Figurative Pop Artist"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .contact-box {
+      border: 1px solid #ddd;
+      background: #fafaf8;
+      padding: 24px 28px;
+      max-width: 400px;
+      margin: 10px 0;
+    }
+    .contact-box p {
+      margin-bottom: 16px;
+      line-height: 1.7;
+      color: #3a3a3a;
+    }
+    .email-reveal {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 13px;
+      font-weight: bold;
+      color: #46461F;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-family: Verdana, sans-serif;
+      letter-spacing: 0.02em;
+    }
+    .email-reveal:hover {
+      background: #46461F;
+      color: #fff;
+      border-color: #46461F;
+    }
+    .email-link {
+      color: #3a3a3a;
+      font-weight: bold;
+      font-size: 13px;
+      border-bottom: #3a3a3a 1px dashed;
+    }
+    .email-link:hover {
+      border-bottom: #3a3a3a 1px solid;
+    }
+    .email-note {
+      font-size: 10px;
+      color: #888;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div id="outer">
+  <div id="upbg"></div>
+  <div id="inner">
+
+    <div id="header">
+      <h1><a href="index.html">Robert Ransom</a></h1>
+      <h2>Figurative Pop Artist</h2>
+    </div>
+    <div id="splash"></div>
+
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Robert Ransom</a></li>
+        <li><a href="exhibits.html">Exhibitions</a></li>
+        <li><a href="available.html">Available</a></li>
+        <li class="active"><a href="contact.html">Email</a></li>
+        <li><a href="images.html">Images</a></li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div class="post">
+        <div class="post-header">
+          <h3>Contact</h3>
+        </div>
+        <div class="entry">
+          <div class="contact-box">
+            <p>Comments and questions about Robert Ransom&#8217;s work are always welcome. Whether you are interested in purchasing a painting, arranging an exhibition, or simply want to say hello &mdash; please reach out by email.</p>
+            <p>Click the button below to reveal the email address:</p>
+            <button class="email-reveal" onclick="revealEmail()" id="reveal-btn">Show Email Address</button>
+            <div id="email-display" style="display:none; margin-top:14px;">
+              <a class="email-link" id="email-link" href="#">Loading...</a>
+              <p class="email-note">Click the address to open in your email program.</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-footer"></div>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <ul>
+        <li>
+          <h2>Art Galleries</h2>
+          <div>
+            <p><strong>Riverstone Gallery</strong><br/>Ennis, Montana</p>
+            <p><strong>John Natsoulas Gallery</strong><br/>Davis, California</p>
+            <p><strong>Thunderbird Art Gallery</strong><br/>Scottsdale, Arizona</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="footer">
+      <p>&copy; 2025 Robert Ransom. All rights reserved.</p>
+    </div>
+
+  </div>
+</div>
+<script>
+  // Email stored in parts so bots can't scrape it from source
+  function revealEmail() {
+    var u = 'ransomarts';
+    var d = 'hotmail.com';
+    var e = u + '\u0040' + d;
+    var link = document.getElementById('email-link');
+    link.href = 'mai' + 'lto:' + e;
+    link.textContent = e;
+    document.getElementById('email-display').style.display = 'block';
+    document.getElementById('reveal-btn').style.display = 'none';
+  }
+</script>
+</body>
+</html>
